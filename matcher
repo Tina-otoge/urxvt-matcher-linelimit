@@ -3,6 +3,7 @@
 # Author: Tim Pope <rxvt-unicodeNOSPAM@tpope.org>
 #         Bob Farrell <robertanthonyfarrell@gmail.com>
 #         Emanuele Giaquinta
+#         Damien "Tina" Savatier <savatier.damien@gmail.com>
 
 #:META:RESOURCE:%.launcher:string:default launcher command
 #:META:RESOURCE:%.button:string:the mouse button used to activate a match
@@ -40,6 +41,10 @@ The C<matcher:select> action enables a mode in which it is possible to
 iterate over the matches using the keyboard and either activate them
 or copy them to the clipboard. While the mode is active, normal terminal
 input/output is suspended and the following bindings are recognized:
+
+It is possible to prevent the plugin from checking a line if it is too long or
+too high up in history with the C<matcher.lengthLimit> and C<matcher.rowLimit>
+resources.
 
 =over 4
 
@@ -273,13 +278,13 @@ sub on_start {
 sub on_line_update {
    my ($self, $row) = @_;
 
-   ## Exit if line row exceeds row limit
+   # exit if line row exceeds row limit
    return () if $self->{rowLimit} != 0 && $row < -$self->{rowLimit};
 
    # fetch the line that has changed
    my $line = $self->line ($row);
 
-   ## Exit if line length exceeds length limit
+   # exit if line length exceeds length limit
    return () if $self->{lengthLimit} != 0 && $line->l > $self->{lengthLimit};
 
    my $text = $line->t;
