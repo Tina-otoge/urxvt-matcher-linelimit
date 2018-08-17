@@ -10,8 +10,7 @@ is longer than the value defined in `lengthLimit` or if it is too higher than
 `rowLimit` in buffer.
 
 ## Example     
-![Example of line too long to trigger matcher and a regular matched line](
-.gh/example.png)
+![Example of line too long to trigger matcher and a regular matched line][img]
 
 ## Installation
 
@@ -31,7 +30,17 @@ You can use any other value, but I recommend 240 and 100.
 
 0 = no limit.
 
+## Thanks
+
+Inspired by [this section][wiki section] in the URxvt article on
+[ArchWiki][archwiki].
+
 ## Self promotion
 
-Check out my [Dotfiles](https://github.com/skielred/Dotfiles) if you want to
-see other URxvt and UNIX tips I did/use.
+Check out my [Dotfiles][dotfiles] if you want to see other URxvt and UNIX tips
+I did and/or use.
+
+[img]: .gh/example.png
+[archwiki]: https://wiki.archlinux.org/index.php/ArchWiki:About
+[wiki section]: https://wiki.archlinux.org/index.php/Rxvt-unicode#Very_long_lines_cause_slowdown
+[dotfiles]: https://github.com/skielred/Dotfiles
