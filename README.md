@@ -12,6 +12,12 @@ is longer than the value defined in `lengthLimit` or if it is too higher than
 ## Example     
 ![Example of line too long to trigger matcher and a regular matched line][img]
 
+## Why?
+
+The matcher plugin can cause slowdowns one the buffer is getting huge. I want
+URxvt to be the fastest possible, so I wanted to give a possibility to limit
+the effects without having to entirely disable the matcher plugin.
+
 ## Installation
 
 Copy `matcher` to one of your URxvt PERL lib directories. ie:
