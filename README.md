@@ -26,7 +26,7 @@ Copy `matcher` to one of your URxvt PERL lib directories. ie:
 ## Configuration
 
 Without any configuration, the default matcher plugin behavior is kept. To add
-restrictions one line length/row, add the following lines to your **X
+restrictions on line length/row, add the following lines to your **X
 resources**:
 ```
 URxvt.matcher.lengthLimit: 240
@@ -35,6 +35,17 @@ URxvt.matcher.rowLimit: 100
 You can use any other value, but I recommend 240 and 100.
 
 0 = no limit.
+
+Example variables block in `~/.Xresources` with matcher plugin configuration:
+```
+ URxvt.perl-ext-common: default,matcher,tabbedex,resize-font
+ 
+ URxvt.url-launcher: /usr/bin/xdg-open
+ URxvt.matcher.button: 1
+ URxvt.matcher.rend.0: Uline fg4
+ URxvt.matcher.rowLimit: 100
+ URxvt.matcher.lengthLimit: 240
+ ```
 
 ## Thanks
 
