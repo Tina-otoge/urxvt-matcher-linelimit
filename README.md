@@ -9,6 +9,10 @@ This will prevent the matcher plugin from checking a line for URLs if the line
 is longer than the value defined in `lengthLimit` or if it is too higher than
 `rowLimit` in buffer.
 
+## Example     
+![Example of line too long to trigger matcher and a regular matched line](
+.gh/example.png)
+
 ## Installation
 
 Copy `matcher` to one of your URxvt PERL lib directories. ie:
