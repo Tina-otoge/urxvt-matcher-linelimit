@@ -6,7 +6,7 @@ Adds two configuration variables for the matcher plugin: `lengthLimit` and
 `rowLimit`
 
 This will prevent the matcher plugin from checking a line for URLs if the line
-is longer than the value defined in `lengthLimit` or if it is too higher than
+is longer than the value defined in `lengthLimit` or if it is higher than
 `rowLimit` in buffer.
 
 ## Example     
