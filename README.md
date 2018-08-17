@@ -14,7 +14,7 @@ is longer than the value defined in `lengthLimit` or if it is higher than
 
 ## Why?
 
-The matcher plugin can cause slowdowns one the buffer is getting huge. I want
+The matcher plugin can cause slowdowns when the buffer is getting huge. I want
 URxvt to be the fastest possible, so I wanted to give a possibility to limit
 the effects without having to entirely disable the matcher plugin.
 
